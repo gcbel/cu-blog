@@ -10,6 +10,9 @@ In this project, I aimed to create a personal blog based on this reference provi
 
 For this project, I created a usuable blog that locally stores a user's blog. Through this project, I had the opportunity to practice using local storage, ....
 
+TODOs:
+* change tab image
+
 ## Installation
 
 N/A
