@@ -8,9 +8,7 @@ In this project, I aimed to create a personal blog based on this reference provi
 
 ![Reference image](assets/images/reference-gif.gif)
 
-I aimed to improve the accessibility of the webpage of a fictional business. Creating accessibile and well-structured webpages is crucial when operating an online presence and for the effectiveness of a website. The changes I made also allows the site to have improved online visibility, as search engines penalize inaccessible sites.
-
-Through this project, I learned the hallmarks of accessible design and how to improve the user experience.
+For this project, I created a usuable blog that locally stores a user's blog. Through this project, I had the opportunity to practice using local storage, ....
 
 ## Installation
 
@@ -18,7 +16,11 @@ N/A
 
 ## Usage
 
-Webpage can be viewed in any browser and navigation links in the top right can be used to navigate to sections on the page.
+Webpage can be viewed in any browser. The first page allows users to input a username, blog title, and content for their blog. If data is incorrectly input, the user will be prompted to complete their information.
+
+Upon submitting a post, the webpage takes the user to their posts. 
+
+The webpage also features a light/dark toggle button, which will change the color scheme of the page.
 
 ## Credits
 
