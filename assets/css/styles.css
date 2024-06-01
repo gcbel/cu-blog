@@ -1,16 +1,26 @@
-/* Create variables */
+/*** VARIABLES ***/
 :root {
     /* Light theme */
     --primary-light: #fff;
     --secondary-light: #00386b;
-    --secondary-light-clear: #00376b50;;
+    --secondary-light-clear: #00386b50;;
 
     /* Dark theme */
     --primary-dark: #002444;
+    --secondary-dark: #fff;
 
+    /* Blue accents */
+    --accent1-light: #00386b;
+    --accent2-light: #00417d;
+    --accent3-light: #014a8e;
+    --accent4-light: #015ab4;
+    --accent5-light: #0069e1;
+    --accent6-light: #73a5df;
 
-    --primary-dark-clear: #00244475;
-    --transparent: #ffffff00;
+    /* Orange accent */
+    --accent1-dark: #EB2411;
+    --accent2-dark: #F4592F;
+    --accent3-dark: #FFA53B;
 }
 
 * {
@@ -18,32 +28,40 @@
     color: var(--secondary-light);
 }
 
-/* Set background, default is light mode */
-body {
-    background-color: var(--primary-light)
+
+/*** LIGHT AND DARK MODES ***/
+.light {
+    background-color: var(--primary-light);
+}
+
+.dark {
+    background-color: var(--primary-dark);
 }
 
 /*** HEADER ***/
-/* Move toggle to right of page */
 header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end; /* Move toggle to right of page */
     padding: 16px 20px 16px 16px;
     border: none;
 }
 
-/* Remove look of toggle button */
 .toggle {    
     text-shadow: 1px 1px 3px var(--primary-dark-clear);
     font-size: 28px;
-    background-color: var(--transparent);
+    background-color: var(--transparent); /* Remove look of toggle button */
     padding: 0px;
     border: none;
 }
 
-/* Make toggle button glow when hovered */
 .toggle span:hover {
-    text-shadow: 1px 1px 2px var(--secondary-light-clear), 0 0 1em var(--secondary-light), 0 0 0.2em var(--secondary-light);
+    /* Make toggle button glow when hovered */
+    text-shadow: 0px 0px 2px var(--accent5-light), 0 0 1em var(--accent3-light), 0 0 0.2em var(--accent1-light);
+}
+
+.dark .toggle span:hover {
+    /* Make toggle button glow when hovered */
+    text-shadow: 0px 0px 2px var(--accent3-dark), 0 0 1em var(--accent2-dark), 0 0 0.2em var(--accent2-dark);
 }
 
 /*** HORIZONTAL LINES ***/
@@ -52,29 +70,31 @@ hr {
     border: 0px;
 }
 
-hr#hl1 {
+.dark hr {
+    background-color: var(--secondary-dark);
+}
+
+hr#hl1, hr#hl3 {
     margin: 0px 0px 14px 0px;
 }
 
-hr#hl2 {
+hr#hl2, hr#hl4 {
     margin: 14px 0px 0px 0px;
 }
 
 /*** MAIN ***/
-/* Align main content */
 main {
+    /* Align main content */
     padding-left: 5vw;
     padding-right: 5vw;
 }
 
-/* No vertical lines on mobile */
 .vl {
-    display: none;  /* Align side by side */
+    display: none;  /* No vertical lines on mobile */
 }
 
-/* Hide left gradient on mobile */
 .sun-image {
-    display: none;
+    display: none; /* Hide left gradient on mobile */
 }
 
 /*** RIGHT TEXT ***/
@@ -87,68 +107,32 @@ main {
     margin-bottom: 30px;
 }
 
-/* Add gradient to title of mobile display */
 .text .img-cont {
-    background: radial-gradient(var(--secondary-light), #00386b, #00417d, #014a8e, #015ab4, #0069e1, #73a5df, var(--primary-light), var(--primary-light), transparent, transparent);
+    /* Add gradient to title of mobile display */
+    background: radial-gradient(var(--secondary-light), var(--accent1-light), var(--accent2-light), var(--accent3-light), var(--accent4-light), var(--accent5-light), var(--accent6-light), var(--primary-light), var(--primary-light), transparent, transparent);
     width: 50vw;
     height: 50vw;
-    margin: 16px 0px 16px 0px;
+    margin: 5vh 0px 4vh 0px;
 }
 
-/* Set title to be the full screen on mobile */
+.dark .text .img-cont {
+    /* Dark gradient for title of mobile display */
+    background: radial-gradient(var(--accent1-dark), var(--accent2-dark), var(--accent3-dark), var(--secondary-dark), var(--primary-dark), transparent, transparent);
+}
+
 .img-cont img {
-    width: 90vw;
-    opacity: 0.5;
+    width: 90vw; /* Set title to be the full screen on mobile */
+    opacity: 0.7;
     position: absolute;
     right: 4.5%;
 }
 
-/* Hide title */
 .img-cont h1 {
-    display: none;
-}
-
-/*** USER INPUT ***/
-.text .text-boxes {
-    width: 78vw;
-    font-size: 30px;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Change width of text boxes */
-.text .text-boxes input {
-    font-size: 20px;
-    width: 76vw;
-    height: 30px;
-    margin: 0px 0px 10px 0px;
-}
-
-/* Change height of content box */
-.text .text-boxes textarea#post-content {
-    width: 76vw;
-    height: 100px;
-}
-
-/*** SUBMIT BUTTON ***/
-.submit {
-    font-size: 20px;
-    color: var(--primary-light);
-    background-color: var(--secondary-light);
-    width: 30vw;
-    padding: 5px 0px 5px 0px;
-    margin: 0px 10vw 0px 10vw;
-    border: none;
-    border-radius: 4px;
-}
-
-.submit:hover {
-    background-color: #015ab4;
+    display: none; /* Hide psuedo title, added for accessibility */
 }
 
 /*** DESKTOP ***/
 @media screen and (min-width: 600px) {
-	/* Make display flex on desktop */
     main {
         display: flex;
         justify-content: space-around;
@@ -158,75 +142,56 @@ main {
     }
 
     /*** VERTICAL LINES ***/
-    /* Create vertical lines side by side */
     .vl {
-        height: 115%;
-        min-height: 600px;
         position: absolute;
         top: 88px;
         left: 49vw;
-        display: flex;
+        display: flex; /* Make vertical lines side by side */
     }
 
-    /* Make vertical lines equally separated */
     hr.vertical {
-        margin: 0px 7px 0px 7px;
+        margin: 0px 7px 0px 7px; /* Make vertical lines equally separated */
     }
 
     /*** LEFT GRADIENT ***/
     .sun-image {
-        background: radial-gradient(var(--secondary-light), #00386b, #00417d, #014a8e, #015ab4, #0069e1, #73a5df, var(--primary-light), var(--primary-light), transparent, transparent);
+        background: radial-gradient(var(--secondary-light), var(--accent1-light), var(--accent2-light), var(--accent3-light), var(--accent4-light), var(--accent5-light), var(--accent6-light), var(--primary-light), var(--primary-light), transparent, transparent);
         height: 40vw;
         width: 40vw;
         display: block;
-        margin: 10px 0px 80px 0px;
+        margin: 10px 0px 10px 0px;
         border-radius: 50% 50% 50% 50%;
     }
 
-    /*** RIGHT TEXT ***/
-    /* Make text fit left side of screen */
-    .text {
-        width: 40vw;
+    .dark .sun-image {
+        background: radial-gradient(var(--accent1-dark), var(--accent2-dark), var(--accent3-dark), var(--secondary-dark), var(--primary-dark), transparent, transparent);
     }
 
-    /* Remove gradient background, adjust size */
+    /*** RIGHT TEXT ***/
+    .text {
+        width: 40vw; /* Make text fit left side of screen */
+    }
+
     .text .img-cont {
         width: 40vw;
         height: 24vw;
-        background: var(--primary-light);
+        background: var(--primary-light); /* Remove gradient background */
         padding: 22px 0px 18px 0px;
     }
+
+    .dark .text .img-cont {
+        background: var(--primary-dark); /* Remove gradient background */
+    }
     
-    /* Increase image opacity */
     .img-cont img {
-        width: 40vw;
+        width: 35vw; /* Adjust width of title */
         opacity: 1;
+        margin: 3vh 2.5vw 0px 0px;
     }
 
-    /* Adjust width of user input area */
     .text .text-boxes {
-        width: 35vw;
+        width: 35vw; /* Adjust width of user input area */
         padding-left: 4.5vw;
-    }
-
-    /*** USER INPUT ***/
-    .text .text-boxes {
-        width: 35vw;
-    }
-
-    /* Change width of text boxes */
-    .text .text-boxes input {
-        width: 34vw;
-    }
-
-    /* Change height of content box */
-    .text .text-boxes textarea#post-content {
-        width: 34vw;
-    }
-
-    /*** SUBMIT BUTTON ***/
-    .submit {
-        width: 14vw;
-        margin: 0px 10vw 0px 10vw;
+        padding-bottom: 32px;
     }
 }

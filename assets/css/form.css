@@ -1,0 +1,61 @@
+/*** USER INPUT ***/
+.text .text-boxes {
+    width: 78vw;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Change width of text boxes */
+.text .text-boxes input {
+    font-size: 20px;
+    width: 76vw;
+    height: 30px;
+    margin: 0px 0px 10px 0px;
+}
+
+/* Change height of content box */
+.text .text-boxes textarea#post-content {
+    width: 76vw;
+    height: 100px;
+}
+
+/*** SUBMIT BUTTON ***/
+.submit {
+    font-size: 20px;
+    color: var(--primary-light);
+    background-color: var(--secondary-light);
+    width: 30vw;
+    padding: 5px 0px 5px 0px;
+    margin: 0px 10vw 0px 10vw;
+    border: none;
+    border-radius: 4px;
+}
+
+.submit:hover {
+    background-color: #015ab4;
+}
+
+/*** DESKTOP ***/
+@media screen and (min-width: 600px) {
+    /*** USER INPUT ***/
+    .text .text-boxes {
+        width: 35vw;
+    }
+
+    /* Change width of text boxes */
+    .text .text-boxes input {
+        width: 34vw;
+    }
+
+    /* Change height of content box */
+    .text .text-boxes textarea#post-content {
+        width: 34vw;
+    }
+
+    /*** SUBMIT BUTTON ***/
+    .submit {
+        width: 14vw;
+        margin: 0px 10vw 0px 10vw;
+    }
+}
