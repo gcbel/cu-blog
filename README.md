@@ -2,7 +2,7 @@
 
 ## Description
 
-Visit this site at https://gcbel.github.io/cu-moriseon-website/.
+Visit this site at https://gcbel.github.io/cu-blog/.
 
 In this project, I aimed to create a personal blog based on this reference provided by the Columbia University Full-Stack Bootcamp.
 
