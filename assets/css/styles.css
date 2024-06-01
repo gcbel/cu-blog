@@ -14,9 +14,8 @@
 }
 
 * {
-    font-family: kudryashev-d-contrast, sans-serif;
-    font-style: normal;
-    font-weight: 400;
+    font-family: 'Times New Roman', serif;
+    color: var(--secondary-light);
 }
 
 /* Set background, default is light mode */
@@ -47,7 +46,7 @@ header {
     text-shadow: 1px 1px 2px var(--secondary-light-clear), 0 0 1em var(--secondary-light), 0 0 0.2em var(--secondary-light);
 }
 
-/* Horizontal lines */
+/*** HORIZONTAL LINES ***/
 hr {
     background-color: var(--secondary-light);
     border: 0px;
@@ -78,12 +77,13 @@ main {
     display: none;
 }
 
-/*** MAIN TEXT ***/
+/*** RIGHT TEXT ***/
 .text {
     width: 90vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 /* Add gradient to title of mobile display */
@@ -102,8 +102,27 @@ main {
     right: 4.5%;
 }
 
+.img-cont h1 {
+    display: none;
+}
+
+/*** USER INPUT ***/
+.text .text-boxes {
+    width: 80vw;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Change width of text boxes */
+.text .text-boxes input {
+    width: 34vw;
+    height: 200px;
+    margin: 0px 0px 10px 0px;
+}
+
 /*** DESKTOP ***/
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 600px) {
 	/* Make display flex on desktop */
     main {
         display: flex;
@@ -131,7 +150,7 @@ main {
         height: 40vw;
         width: 40vw;
         display: block;
-        margin: 10px 0px 0px 0px;
+        margin: 10px 0px 80px 0px;
         border-radius: 50% 50% 50% 50%;
     }
 
@@ -141,9 +160,10 @@ main {
         width: 40vw;
     }
 
-    /* Remove gradient background */
+    /* Remove gradient background, adjust size */
     .text .img-cont {
         width: 40vw;
+        height: 24vw;
         background: var(--primary-light);
     }
     
@@ -151,5 +171,10 @@ main {
     .img-cont img {
         width: 40vw;
         opacity: 1;
+    }
+
+    /* Adjust width of user input area */
+    .text .text-boxes {
+        width: 32vw;
     }
 }
