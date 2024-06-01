@@ -25,16 +25,16 @@
 
 * {
     font-family: 'Times New Roman', serif;
-    color: var(--secondary-light);
 }
-
 
 /*** LIGHT AND DARK MODES ***/
 .light {
+    color: var(--secondary-light);
     background-color: var(--primary-light);
 }
 
 .dark {
+    color: var(--secondary-dark);
     background-color: var(--primary-dark);
 }
 

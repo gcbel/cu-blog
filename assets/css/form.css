@@ -6,18 +6,16 @@
     flex-direction: column;
 }
 
-/* Change width of text boxes */
 .text .text-boxes input {
     font-size: 20px;
-    width: 76vw;
+    width: 76vw; /* Change width of text boxes */
     height: 30px;
     margin: 0px 0px 10px 0px;
 }
 
-/* Change height of content box */
 .text .text-boxes textarea#post-content {
     width: 76vw;
-    height: 100px;
+    height: 100px; /* Change height of content box */
 }
 
 /*** SUBMIT BUTTON ***/
@@ -32,8 +30,17 @@
     border-radius: 4px;
 }
 
+.dark .submit {
+    color: var(--primary-dark);
+    background-color: var(--secondary-dark);
+}
+
 .submit:hover {
-    background-color: #015ab4;
+    background-color: var(--accent3-light);
+}
+
+.dark .submit:hover {
+    background-color: var(--accent2-dark);
 }
 
 /*** DESKTOP ***/
