@@ -1,0 +1,155 @@
+/* Create variables */
+:root {
+    /* Light theme */
+    --primary-light: #fff;
+    --secondary-light: rgb(0, 56, 107);
+    --secondary-light-clear: #00376b50;;
+
+    /* Dark theme */
+    --primary-dark: #002444;
+
+
+    --primary-dark-clear: #00244475;
+    --transparent: #ffffff00;
+}
+
+* {
+    font-family: kudryashev-d-contrast, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* Set background, default is light mode */
+body {
+    background-color: var(--primary-light)
+}
+
+/*** HEADER ***/
+/* Move toggle to right of page */
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px 20px 16px 16px;
+    border: none;
+}
+
+/* Remove look of toggle button */
+.toggle {    
+    text-shadow: 1px 1px 3px var(--primary-dark-clear);
+    font-size: 28px;
+    background-color: var(--transparent);
+    padding: 0px;
+    border: none;
+}
+
+/* Make toggle button glow when hovered */
+.toggle span:hover {
+    text-shadow: 1px 1px 2px var(--secondary-light-clear), 0 0 1em var(--secondary-light), 0 0 0.2em var(--secondary-light);
+}
+
+/* Horizontal lines */
+hr {
+    background-color: var(--secondary-light);
+    border: 0px;
+}
+
+hr#hl1 {
+    margin: 0px 0px 14px 0px;
+}
+
+hr#hl2 {
+    margin: 14px 0px 0px 0px;
+}
+
+/*** MAIN ***/
+/* Align main content */
+main {
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+/* No vertical lines on mobile */
+.vl {
+    display: none;  /* Align side by side */
+}
+
+/* Hide left gradient on mobile */
+.sun-image {
+    display: none;
+}
+
+/*** MAIN TEXT ***/
+.text {
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Add gradient to title of mobile display */
+.text .img-cont {
+    background: radial-gradient(rgb(0, 56, 107), rgb(0, 56, 107), rgb(0, 124, 156), rgb(0, 189, 205), var(--primary-light), transparent, transparent);
+    width: 50vw;
+    height: 50vw;
+    margin: 10px 0px 0px 0px;
+}
+
+/* Set title to be the full screen on mobile */
+.img-cont img {
+    width: 90vw;
+    opacity: 0.5;
+    position: absolute;
+    right: 4.5%;
+}
+
+/*** DESKTOP ***/
+@media screen and (min-width: 480px) {
+	/* Make display flex on desktop */
+    main {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+
+    /*** VERTICAL LINES ***/
+    /* Create vertical lines */
+    .vl {
+        display: flex;  /* Align side by side */
+        height: 100vh; /* Full height of the viewport */
+    }
+
+    /* Make vertical lines equally separated */
+    hr.vertical {
+        margin: 0px 7px 0px 7px;
+    }
+
+    /*** LEFT GRADIENT ***/
+    .sun-image {
+        background: radial-gradient(rgb(0, 56, 107), rgb(0, 56, 107), rgb(0, 124, 156), rgb(0, 189, 205), var(--primary-light), transparent, transparent);
+        height: 40vw;
+        width: 40vw;
+        display: block;
+        margin: 10px 0px 0px 0px;
+        border-radius: 50% 50% 50% 50%;
+    }
+
+    /*** RIGHT TEXT ***/
+    /* Make text fit left side of screen */
+    .text {
+        width: 40vw;
+    }
+
+    /* Remove gradient background */
+    .text .img-cont {
+        width: 40vw;
+        background: var(--primary-light);
+    }
+    
+    /* Increase image opacity */
+    .img-cont img {
+        width: 40vw;
+        opacity: 1;
+    }
+}
