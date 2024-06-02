@@ -6,6 +6,7 @@ submit.addEventListener('click', function(event) {
 
     // Fetch local data and revert to an array
     let stringOfEntries = localStorage.getItem("entries");
+    console.log(stringOfEntries)
     let entries = [];
 
     // Check if entriesString is not null or empty
@@ -40,7 +41,7 @@ submit.addEventListener('click', function(event) {
     console.log(entries);
     console.log(JSON.stringify(entries));
     localStorage.setItem("entries", JSON.stringify(entries));
-    console.log(localStorage.getItem(entries));
+    console.log(localStorage.getItem("entries"));
 })
 
 /* Check to ensure all input areas have content */
