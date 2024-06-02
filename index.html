@@ -46,15 +46,15 @@
                 <!-- User input -->
                 <div class="text-boxes">
                     <div class="user">
-                        <h2>Username:</h2>
+                        <h2>Username:<span class="required" id="name-required"> Please add a username!</span></h2>
                         <input type="text" id="name" name="name" required>
                     </div>
                     <div class="title">
-                        <h2>Post title:</h2>
+                        <h2>Post title:<span class="required" id="title-required"> Please give your post a title!</span></h2>
                         <input type="text" id="post-title" name="post-title" required>
                     </div>
                     <div class="content">
-                        <h2>Post content:</h2>
+                        <h2>Post content:<span class="required" id="post-required"> Please add a blog entry!</span></h2>
                         <textarea type="text" id="post-content" name="post-content" required></textarea>
                     </div>
                     <button class="submit">Submit</button>

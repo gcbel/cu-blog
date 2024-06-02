@@ -14,8 +14,20 @@
 }
 
 .text .text-boxes textarea#post-content {
+    font-size: 20px;
     width: 76vw;
     height: 100px; /* Change height of content box */
+}
+
+/*** REQUIRED POPUP ***/
+.required {
+    font-size: 20px;
+    color: var(--accent1-dark);
+    display: none;
+}
+
+.dark .required {
+    color: var(--accent2-dark);
 }
 
 /*** SUBMIT BUTTON ***/
