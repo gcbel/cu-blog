@@ -19,6 +19,15 @@
     height: 100px; /* Change height of content box */
 }
 
+/*** SUBHEADINGS ***/
+.h2 {
+    color: var(--secondary-light)
+}
+
+.dark .h2 {
+    color: var(--secondary-dark)
+}
+
 /*** REQUIRED POPUP ***/
 .required {
     font-size: 20px;
