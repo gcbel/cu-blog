@@ -2,7 +2,10 @@
 const submit = document.querySelector('.submit');
 const nameRequired = document.getElementById("name-required");
 const titleRequired = document.getElementById("title-required");
-const postRequired = document.getElementById("post-required")
+const postRequired = document.getElementById("post-required");
+const hl2 = document.getElementById('hl2');
+const hl3 = document.getElementById('hl3');
+const vl = document.querySelector('.vl');
 
 /* Submitting the form */
 submit.addEventListener('click', function(event) {
@@ -75,3 +78,16 @@ function checkCompleted (name, postTitle, postContent) {
     }
     return formCompleted;
 }
+
+/* Get correct vertical line height and full background */
+function adjustVerticalLineHeight() {
+    // Get height between horizontal lines to make length of vertical lines
+    const hl2Height = hl2.getBoundingClientRect().bottom;
+    const hl3Height = hl3.getBoundingClientRect().top;
+    const height = hl3Height - hl2Height + 1;
+    vl.style.height = height + 'px';
+}
+
+/* Adjust height on window load and resize */
+window.onload = adjustVerticalLineHeight;
+window.onresize = adjustVerticalLineHeight;
