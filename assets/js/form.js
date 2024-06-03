@@ -1,10 +1,10 @@
 /* Global variables */
 const submit = document.querySelector('.submit');
-const nameRequired = document.getElementById("name-required");
-const titleRequired = document.getElementById("title-required");
-const postRequired = document.getElementById("post-required");
-const hl2 = document.getElementById('hl2');
-const hl3 = document.getElementById('hl3');
+const nameRequired = document.querySelector("#name-required");
+const titleRequired = document.querySelector("#title-required");
+const postRequired = document.querySelector("#post-required");
+const hl2 = document.querySelector('#hl2');
+const hl3 = document.querySelector('#hl3');
 const vl = document.querySelector('.vl');
 
 /* Submitting the form */
@@ -88,6 +88,6 @@ function adjustVerticalLineHeight() {
     vl.style.height = height + 'px';
 }
 
-/* Adjust height on window load and resize */
+/* Adjust vertical line height on window load and resize */
 window.onload = adjustVerticalLineHeight;
 window.onresize = adjustVerticalLineHeight;

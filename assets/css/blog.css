@@ -1,4 +1,9 @@
 /*** BLOG ENTRIES ***/
+main {
+    display: flex;
+    flex-direction: column;
+}
+
 article {
     font-size: 30px;
     width: 80vw;
