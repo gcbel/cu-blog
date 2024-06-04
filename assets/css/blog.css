@@ -9,6 +9,8 @@ h1 {
     padding: 0px 0px 0px 20px;
 }
 
+/*** HORIZONTAL LINES ***/
+
 hr {
     min-width: 330px;
 }
@@ -19,7 +21,7 @@ hr {
     color: var(--primary-light);
     background-color: var(--secondary-light);
     position: relative;
-    top: -2.5px;
+    top: -2px;
     margin: 0px 16px 0px 0px;
     padding: 7px 10px 7px 12px;
     border: none;
@@ -40,51 +42,58 @@ hr {
 }
 
 /*** BLOG ENTRIES ***/
+body {
+    min-width: 335px;
+}
+
 main {
     min-width: 310px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding: 0px;
+    padding-bottom: 30px;
 }
 
 article {
     font-size: 30px;
-    height: 200px;
-    width: 80vw;
+    height: auto;
+    width: 75vw;
     min-width: 230px;
-    margin: 3vh 3vw 3vh 3vw;
+    margin: 30px 3vw 15px 3vw;
     padding: 15px;
     border: solid 3px var(--secondary-light);
     border-radius: 10px;
+    word-break: break-all;
+    white-space: normal;
 }
 
 .dark article {
-    border: 2px solid var(--secondary-dark);
+    border: 3px solid var(--secondary-dark);
 }
 
-h2 {
-    font-size: 30px;
+article h2 {
+    font-weight: bold;
     padding-bottom: 5px;
     margin: 5px 10px 5px 10px;
-    border-bottom: 2px solid var(--secondary-light);
+    border-bottom: 3px solid var(--secondary-light);
 }
 
-p {
+.dark article h2 {
+    border-bottom: 2px solid var(--secondary-dark);
+}
+
+article p {
     font-style: italic;
-    margin: 10px 10px 10px 25px;
+    margin: 15px 10px 15px 25px;
 }
 
-h3 {
+article h3 {
     color: var(--accent4-light);
     font-size: 26px;
-    position: relative;
-    top: 80px;
-    margin: 5px 10px 5px 10px;
+    margin: 10px 10px 5px 10px;
 }
 
-/*** DESKTOP ***/
-@media screen and (min-width: 600px) {
-
+.dark article h3 {
+    color: var(--accent3-dark);
 }
