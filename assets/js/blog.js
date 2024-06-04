@@ -10,7 +10,7 @@ function loadEntries () {
     for (const index in entries) {
         let entry = entries[index]
         let article = document.createElement("article");
-        article.innerHTML = `<h3>${entry.content}</h3> <p>${entry.title}</p> <h4>${entry.username}</h4>`
+        article.innerHTML = `<h2>${entry.content}</h2> <p>${entry.title}</p> <h3>Posted by:  ${entry.username}</h3>`
         articles.appendChild(article);
     }
 }
