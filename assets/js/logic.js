@@ -10,15 +10,15 @@ toggle.addEventListener('click', function(event) {
         if (document.querySelector('img')) {
             document.querySelector('img').src = "assets/images/mind-dark.png"
         }
-        document.querySelector('span').innerText = "☀️";
+        document.querySelector('#toggle-icon').innerText = "☀️";
         console.log(document.querySelector('span'));
         container.setAttribute('class', 'dark');
     } else {
         mode = "light";
         if (document.querySelector('img')) {
-        document.querySelector('img').src = "assets/images/mind-light.png"
+            document.querySelector('img').src = "assets/images/mind-light.png"
         }
-        document.querySelector('span').innerText = "🌒";
+        document.querySelector('#toggle-icon').innerText = "🌒";
         container.setAttribute('class', 'light');
     }
 })

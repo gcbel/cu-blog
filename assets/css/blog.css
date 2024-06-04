@@ -1,3 +1,35 @@
+/*** HEADER ***/
+header {
+    min-width: 290px;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 40px;
+    padding: 0px 0px 0px 20px;
+}
+
+.back {
+    font-size: 20px;
+    color: var(--primary-light);
+    background-color: var(--secondary-light-clear);
+    position: relative;
+    top: -2.5px;
+    margin: 0px 16px 0px 0px;
+    padding: 7px 10px 7px 12px;
+    border: none;
+    border-radius: 5px;
+}
+
+.back .dark {
+    color: var(--primary-dark);
+    background-color: var(--secondary-dark);
+}
+
+hr {
+    min-width: 330px;
+}
+
 /*** BLOG ENTRIES ***/
 main {
     display: flex;
@@ -6,9 +38,10 @@ main {
 
 article {
     font-size: 30px;
-    width: 80vw;
     height: 20vh;
     min-height: 100px;
+    width: 80vw;
+    min-width: 250px;
     margin: 3vh;
     padding: 10px;
     border: solid 3px var(--secondary-light);

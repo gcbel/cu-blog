@@ -8,15 +8,17 @@
 
 .text .text-boxes input {
     font-size: 20px;
-    width: 76vw; /* Change width of text boxes */
     height: 30px;
+    width: 76vw; /* Change width of text boxes */
+    min-width: 140px;
     margin: 0px 0px 10px 0px;
 }
 
 .text .text-boxes textarea#post-content {
     font-size: 20px;
-    width: 76vw;
     height: 100px; /* Change height of content box */
+    width: 76vw;
+    min-width: 140px;
 }
 
 /*** SUBHEADINGS ***/

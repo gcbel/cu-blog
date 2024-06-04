@@ -1,5 +1,8 @@
+/* Global variables */
 const articles = document.querySelector('main');
+const back = document.querySelector(".back");
 
+/* Populate page with user entries */
 function loadEntries () {
     const entries = JSON.parse(localStorage.getItem("entries"))
 
@@ -11,5 +14,10 @@ function loadEntries () {
         articles.appendChild(article);
     }
 }
+
+/* Navigate to main page */
+back.addEventListener ("click", function(event) {
+    window.location.href = "index.html";
+});
 
 window.onload = loadEntries;

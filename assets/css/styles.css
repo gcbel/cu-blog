@@ -27,6 +27,10 @@
     font-family: 'Times New Roman', serif;
 }
 
+body {
+    min-width: 200px;
+}
+
 /*** LIGHT AND DARK MODES ***/
 .light {
     color: var(--secondary-light);
@@ -110,8 +114,8 @@ main {
 .text .img-cont {
     /* Add gradient to title of mobile display */
     background: radial-gradient(var(--secondary-light), var(--accent1-light), var(--accent2-light), var(--accent3-light), var(--accent4-light), var(--accent5-light), var(--accent6-light), var(--primary-light), var(--primary-light), transparent, transparent);
-    width: 50vw;
     height: 50vw;
+    width: 50vw;
     margin: 5vh 0px 4vh 0px;
 }
 
@@ -173,8 +177,8 @@ main {
     }
 
     .text .img-cont {
-        width: 40vw;
         height: 24vw;
+        width: 40vw;
         background: var(--primary-light); /* Remove gradient background */
         padding: 22px 0px 18px 0px;
     }
