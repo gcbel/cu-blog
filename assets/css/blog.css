@@ -68,7 +68,7 @@ article {
     border-radius: 10px;
     word-break: break-all;
     white-space: normal;
-    filter: drop-shadow(gray 1px 1px 2px);
+    filter: drop-shadow(gray 0.5px 0.5px 1px);
 }
 
 .dark article {
