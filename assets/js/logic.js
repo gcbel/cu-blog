@@ -11,7 +11,6 @@ function setTheme () {
             document.querySelector('img').src = "assets/images/mind-light.png";
         }
         document.documentElement.style.backgroundColor = 'var(--primary-light)'
-        // document.documentElement.style.setProperty('--primary-dark', 'var(--primary-light)');
         document.querySelector('#toggle-icon').innerText = "🌒";
         container.setAttribute('class', 'light');
     } else {
@@ -19,7 +18,6 @@ function setTheme () {
             document.querySelector('img').src = "assets/images/mind-dark.png";
         }
         document.documentElement.style.backgroundColor = 'var(--primary-dark)'
-        //document.documentElement.style.setProperty('--primary-light', 'var(--primary-dark)');
         document.querySelector('#toggle-icon').innerText = "☀️";
         container.setAttribute('class', 'dark');
     }
