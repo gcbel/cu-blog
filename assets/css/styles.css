@@ -184,6 +184,7 @@ footer p a:hover {
 
     /*** VERTICAL LINES ***/
     .vl {
+        color: var(--secondary-light);
         position: absolute;
         top: 88px;
         left: 49vw;
