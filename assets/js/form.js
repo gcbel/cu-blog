@@ -1,4 +1,4 @@
-/* Global variables */
+/* VARIABLES */
 const submit = document.querySelector('.submit');
 const nameRequired = document.querySelector("#name-required");
 const titleRequired = document.querySelector("#title-required");
@@ -7,6 +7,43 @@ const hl2 = document.querySelector('#hl2');
 const hl3 = document.querySelector('#hl3');
 const vl = document.querySelector('.vl');
 
+/* FUNCTIONS */
+/* Check to ensure all input areas have content */
+function checkCompleted (name, postTitle, postContent) {
+    let formCompleted = true;
+    if (name.length === 0) {
+        nameRequired.style.display = 'inline';
+        formCompleted = false;
+    } else {
+        nameRequired.style.display = 'none';
+    }
+    
+    if (postTitle.length === 0) {
+        titleRequired.style.display = 'inline';
+        formCompleted = false;
+    } else {
+        titleRequired.style.display = 'none';
+    }
+    
+    if (postContent.length === 0) {
+        postRequired.style.display = 'inline';
+        formCompleted = false;
+    } else {
+        postRequired.style.display = 'none';
+    }
+    return formCompleted;
+}
+
+/* Get correct vertical line height and full background */
+function adjustVerticalLineHeight() {
+    // Get height between horizontal lines to make length of vertical lines
+    const hl2Height = hl2.getBoundingClientRect().bottom;
+    const hl3Height = hl3.getBoundingClientRect().top;
+    const height = hl3Height - hl2Height + 1;
+    vl.style.height = height + 'px';
+}
+
+/* EVENT LISTENERS */
 /* Submitting the form */
 submit.addEventListener('click', function(event) {
     event.preventDefault();
@@ -52,41 +89,6 @@ submit.addEventListener('click', function(event) {
     // Navigate to blog
     window.location.href = "blog.html";
 })
-
-/* Check to ensure all input areas have content */
-function checkCompleted (name, postTitle, postContent) {
-    let formCompleted = true;
-    if (name.length === 0) {
-        nameRequired.style.display = 'inline';
-        formCompleted = false;
-    } else {
-        nameRequired.style.display = 'none';
-    }
-    
-    if (postTitle.length === 0) {
-        titleRequired.style.display = 'inline';
-        formCompleted = false;
-    } else {
-        titleRequired.style.display = 'none';
-    }
-    
-    if (postContent.length === 0) {
-        postRequired.style.display = 'inline';
-        formCompleted = false;
-    } else {
-        postRequired.style.display = 'none';
-    }
-    return formCompleted;
-}
-
-/* Get correct vertical line height and full background */
-function adjustVerticalLineHeight() {
-    // Get height between horizontal lines to make length of vertical lines
-    const hl2Height = hl2.getBoundingClientRect().bottom;
-    const hl3Height = hl3.getBoundingClientRect().top;
-    const height = hl3Height - hl2Height + 1;
-    vl.style.height = height + 'px';
-}
 
 /* Adjust vertical line height on window load and resize */
 window.onload = adjustVerticalLineHeight;

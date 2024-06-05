@@ -77,10 +77,12 @@ header {
 hr {
     background-color: var(--secondary-light);
     border: 0px;
+    filter: drop-shadow(gray 1px 1px 2px);
 }
 
 .dark hr {
     background-color: var(--secondary-dark);
+    filter: drop-shadow(black 3px 3px 4px);
 }
 
 hr#hl1, hr#hl3 {

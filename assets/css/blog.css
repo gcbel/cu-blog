@@ -17,20 +17,22 @@ hr {
 
 /*** BACK BUTTON ***/
 .back {
-    font-size: 20px;
+    font-size: 19px;
     color: var(--primary-light);
     background-color: var(--secondary-light);
     position: relative;
-    top: -2px;
+    top: -3px;
     margin: 0px 16px 0px 0px;
-    padding: 7px 10px 7px 12px;
+    padding: 5px 10px 5px 12px;
     border: none;
     border-radius: 5px;
+    filter: drop-shadow(gray 1.5px 1.5px 2px);
 }
 
 .dark .back {
     color: var(--primary-dark);
     background-color: var(--secondary-dark);
+    filter: drop-shadow(black 2px 3px 3px);
 }
 
 .back:hover {
@@ -66,10 +68,12 @@ article {
     border-radius: 10px;
     word-break: break-all;
     white-space: normal;
+    filter: drop-shadow(gray 1px 1px 2px);
 }
 
 .dark article {
     border: 3px solid var(--secondary-dark);
+    filter: drop-shadow(black 2px 3px 3px);
 }
 
 article h2 {
