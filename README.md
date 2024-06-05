@@ -7,11 +7,15 @@ Visit this site at https://gcbel.github.io/cu-blog/.
 For this project, I created a page that allows users to store personal blog posts that will persist between page visits. To do this, the page locally stores a user's blog information, including usernames, post titles, and post content. Through this project, I had the opportunity to practice using vanilla Javascript, CSS, and Flexbox to create a responsive webpage that dynamically resizes into mobile and desktop layouts.
 
 The final deployed desktop webpage in dark mode:
+
 ![Reference image](assets/images/dark-main.png)
+
 ![Reference image](assets/images/dark-blog.png)
 
 In light mode:
+
 ![Reference image](assets/images/light-main.png)
+
 ![Reference image](assets/images/light-blog.png)
 
 This project is based on this reference provided by the Columbia University Full-Stack Bootcamp.
