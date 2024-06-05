@@ -1,10 +1,10 @@
-# Personal Blog
+# Private Blog
 
 ## Description
 
 Visit this site at https://gcbel.github.io/cu-blog/.
 
-In this project, I aimed to create a personal blog based on this reference provided by the Columbia University Full-Stack Bootcamp.
+In this project, I aimed to create a private blog usable by any webpage visitors, based on this reference provided by the Columbia University Full-Stack Bootcamp.
 
 ![Reference image](assets/images/reference-gif.gif)
 
