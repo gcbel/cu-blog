@@ -23,8 +23,13 @@
     --accent3-dark: #FFA53B;
 }
 
+/*** MAIN DIVS ***/
 * {
     font-family: 'Times New Roman', serif;
+}
+
+html {
+    background-color: var(--primary-dark);
 }
 
 body {
