@@ -4,11 +4,7 @@
 
 Visit this site at https://gcbel.github.io/cu-blog/.
 
-In this project, I aimed to create a private blog usable by any webpage visitors, based on this reference provided by the Columbia University Full-Stack Bootcamp.
-
-![Reference image](assets/images/reference-gif.gif)
-
-For this project, I created a page that allows users to store personal blog posts that will persist between page isits. To do this, the page locally stores a user's blog information, including usernames, post titles, and post content. Through this project, I had the opportunity to practice using vanilla Javascript, CSS, and flexbox to create a responsive webpage that dynamically resizes into mobile and desktop layouts.
+For this project, I created a page that allows users to store personal blog posts that will persist between page visits. To do this, the page locally stores a user's blog information, including usernames, post titles, and post content. Through this project, I had the opportunity to practice using vanilla Javascript, CSS, and Flexbox to create a responsive webpage that dynamically resizes into mobile and desktop layouts.
 
 The final deployed desktop webpage in dark mode:
 ![Reference image](assets/images/dark-main.png)
@@ -17,6 +13,10 @@ The final deployed desktop webpage in dark mode:
 In light mode:
 ![Reference image](assets/images/light-main.png)
 ![Reference image](assets/images/light-blog.png)
+
+This project is based on this reference provided by the Columbia University Full-Stack Bootcamp.
+
+![Reference image](assets/images/reference-gif.gif)
 
 ## Installation
 
